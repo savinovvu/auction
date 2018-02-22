@@ -5,6 +5,6 @@ export class Product {
     public price: number,
     public rating: number,
     public description: string,
-    public categories: string[]) {
+    public categories: Array<string>) {
   }
 }
