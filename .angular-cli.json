@@ -20,7 +20,8 @@
       "prefix": "auction",
       "styles": [
         "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "./custom.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
