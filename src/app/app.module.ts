@@ -10,6 +10,11 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { SearchComponent } from './components/search/search.component';
 import { StarsComponent } from './components/stars/stars.component';
 import {ProductService} from './services/product.service';
+import {routing} from './app.routing';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { HomeComponent } from './components/home/home.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+
 
 
 @NgModule({
@@ -20,12 +25,16 @@ import {ProductService} from './services/product.service';
     NavbarComponent,
     ProductItemComponent,
     SearchComponent,
-    StarsComponent
+    StarsComponent,
+    ProductDetailComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, routing
   ],
-  providers: [ProductService],
+  providers: [ProductService,
+    {provide:LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [ApplicationComponent]
 })
 export class AppModule { }

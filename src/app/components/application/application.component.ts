@@ -10,11 +10,7 @@ import {Product} from '../../model/product.entity';
 
 })
 export class ApplicationComponent implements OnInit {
-  products: Array<Product> = [];
 
-  constructor(private productService: ProductService) {
-    this.products = this.productService.getProducts();
-  }
 
   ngOnInit() {
   }
