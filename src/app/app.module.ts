@@ -14,6 +14,8 @@ import {routing} from './app.routing';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { FilterPipe } from './pipes/filter.pipe';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -27,10 +29,11 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     SearchComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipe
   ],
   imports: [
-    BrowserModule, routing
+    BrowserModule, routing, ReactiveFormsModule
   ],
   providers: [ProductService,
     {provide:LocationStrategy, useClass: HashLocationStrategy}
