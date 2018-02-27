@@ -17,6 +17,15 @@
   <div class="row">
     <div class="col-md-12"></div>
   </div>
+
+<div [hidden]="isReviewHidden">
+  <div><auction-stars [(rating)]="newRating"
+                      [readonly]="false" class="large"></auction-stars></div>
+  <div><textarea [(ngModel)]="newComment"></textarea></div>
+  <div><button (click)="addReview()" class="btn">Add review</button></div>
+</div>
+
+
   <div class="row" *ngFor="let review of reviews">
     <hr>
     <div class="col-md-12">
@@ -27,3 +36,4 @@
     </div>
   </div>
 </div>
+
