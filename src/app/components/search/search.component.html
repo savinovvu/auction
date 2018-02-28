@@ -1,6 +1,6 @@
 
 <form name="searchForm" [formGroup]="formModel" (ngSubmit)="onSearch()"  role="form" novalidate>
-  <div class="form-group" [class.has-error]="formModel.hasError('minlength', 'title')" ]>
+  <div class="form-group" [class.has-error]="formModel.hasError('minlength', 'title')">
     <label for="productTitle">Product title:</label>
     <input type="text" id="productTitle"
            placeholder="Title" class="form-control" minlength="3" formControlName="title">
@@ -10,7 +10,7 @@
   <div class="form-group" [class.has-error]="formModel.hasError('positivenumber','price')">
     <label for="price">Product price:</label>
     <input id="price"
-           name="price"
+           name="productPrice"
            formControlName="price"
            type="number" min="0" step="any"
            placeholder="Price" class="form-control">
@@ -21,7 +21,7 @@
 
   <div class="form-group">
     <label for="category">Product category:</label>
-    <select id="category" class="form-control" [formControlName]="category">
+    <select id="category" class="form-control" formControlName="category">
       <option value="-1">All categories</option>
       <option *ngFor="let category of categories" [value]="category">{{category}}</option>
     </select>

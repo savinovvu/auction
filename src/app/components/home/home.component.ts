@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from '../../model/product.entity';
 import {ProductService} from '../../services/product.service';
 import {FormControl} from '@angular/forms';
+import "rxjs/add/operator/debounceTime";
 
 @Component({
   selector: 'auction-home',
